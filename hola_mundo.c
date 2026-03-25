@@ -45,6 +45,38 @@ int main(){
      printf("%d\n", 1 || 0); // 1
      printf("%d\n",  0||1); // 1
      printf("%d\n",  0|| 0); // 0
-     
+
+     int autorizado = 1;
+
+    if (autorizado) {
+    printf("Puede ingresar\n");
+    } else {
+    printf("No puede ingresar\n");
+    }
+    entero = 90;
+    if (entero == 99) {
+        printf("Es 99\n");
+    } else if (entero == 100) {
+        printf("Es 100\n");
+    } else {
+        printf("No es 99 ni 100\n");// Si el número es 90, se ejecutará esta parte
+    }
+
+    { char color = 'V';
+     // switch acepta int y char
+     switch (color) {
+        case 'V':
+            printf("Éxito\n");
+            break;
+        case 'A':
+            printf("Advertencia\n");
+            break;
+        default:
+            printf("Error\n");
+            break;
+     }
+    }
+
     return 0;
+    
 }
