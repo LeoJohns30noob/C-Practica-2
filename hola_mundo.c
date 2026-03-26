@@ -1,4 +1,5 @@
 #include <stdio.h>
+#include "restart.h" //Funcion restart
 void sumar(int primero, int segundo) {
     printf("%d\n", primero + segundo);
 }
@@ -6,6 +7,21 @@ void sumar(int primero, int segundo) {
 int multiplicar(int primero, int segundo) {
     return primero * segundo; 
 }
+//Función con struct
+typedef struct Lenguaje {
+char* nombre;
+int año;
+} Lenguaje;
+
+void descripcion(Lenguaje lenguaje) {
+printf("%s fue creado en %d\n", lenguaje.nombre,lenguaje.año);
+}
+
+// Función restart.c
+int restar(int a, int b) {
+        return a - b;
+        }
+
 int main(){
     //Este es un comentario 
     printf("\nHola Mundo\n¿Como va el día?\n");
@@ -111,6 +127,21 @@ int main(){
        int resultado = multiplicar(3, 2);
             printf("%d\n", resultado); // 6 
         }  
+
+        // Función con struct
+        Lenguaje html;
+        html.nombre = "HTML";
+        html.año = 1993;
+        Lenguaje css;
+        css.nombre = "CSS";
+        css.año = 1996;
+        descripcion(html); // 'HTML fue creado en 1993'
+        descripcion(css); // 'CSS fue creado en 1996'
+
+        // Función restart
+        { int resultado = restar(10, 2);
+            printf("%d\n", resultado); // 8
+        } 
 
     return 0;
     
