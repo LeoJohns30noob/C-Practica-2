@@ -1,5 +1,11 @@
 #include <stdio.h>
+void sumar(int primero, int segundo) {
+    printf("%d\n", primero + segundo);
+}
 
+int multiplicar(int primero, int segundo) {
+    return primero * segundo; 
+}
 int main(){
     //Este es un comentario 
     printf("\nHola Mundo\n¿Como va el día?\n");
@@ -14,8 +20,8 @@ int main(){
      printf("%d\n", entero);
      float decimal = 1.4352345;
      printf("%f\n", decimal);
-     int número[] = {1,2,3,4,5};
-     printf("%d\n", número[0]);
+     int numeros[] = {1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20};
+     printf("%d\n", numeros[0]);
      char *animales [] = { "perro","gato","tigre"};
      printf("%s\n",animales[1]);
      float pi = 3.14;
@@ -76,6 +82,35 @@ int main(){
             break;
      }
     }
+
+        // Usamos el arreglo animales definido antes char *animales [] = { "perro","gato","tigre"};
+        // iniciamos i con 0
+        // mientras i sea menor que 3
+        // aumentamos i + 1 en cada iteración con i++ para el ciclo FOR
+    for (int i = 0; i < 3; i++) {
+        printf("%s\n", animales[i]);
+        }
+
+        //Usamos valores numeros en for
+        for (int i = 0; i < 10; i++) {
+        printf("%d\n", numeros[i] + 10);
+      }
+      //Ahora aplicamos ejemplo con bucle WHILE
+      //Usamos int entero definido antes y nombramos una nueva variable
+        int emergencia = 111;
+        while (entero <= emergencia) {
+        printf("%d\n", entero);
+        entero++;  
+        }
+      // Crear una nueva función utilizando void para imprimir un mensaje personalizado
+         {  sumar(2, 2); // 4
+            sumar(3, 4); // 7 
+         }
+       //Nueva función con return para multiplicar dos números y mostrar el resultado
+         {
+       int resultado = multiplicar(3, 2);
+            printf("%d\n", resultado); // 6 
+        }  
 
     return 0;
     
