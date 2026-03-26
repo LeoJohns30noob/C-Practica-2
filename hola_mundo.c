@@ -19,7 +19,7 @@ printf("%s fue creado en %d\n", lenguaje.nombre,lenguaje.año);
 
 // Función restart.c
 int restar(int a, int b) {
-        return a - b;
+        return a + b;
         }
 
 int main(){
